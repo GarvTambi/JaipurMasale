@@ -6,9 +6,9 @@ body, h1, h2, p {
 }
 
 header {
-	height: 100vh;
+	height: 40vh;
 	position: relative;
-	background: #0e131c url("../img/1.jpeg") no-repeat center center fixed;
+	/* background: #0e131c url("../img/1.jpeg") no-repeat center center fixed; */
 	background-size: cover;
 }
 
@@ -114,14 +114,15 @@ nav a.active {
 	color: #d3a261;
 	font-family: 'Allura', cursive, Calibri, sans-serif;
 	text-transform: none;
-	font-size: 60px;
+	font-size: 80px;
 }
 
 .brand, .topic {
 	letter-spacing: 15px;
-	margin-top: -30px;
+	margin-top: -10px;
+	font-family: 'Allura', cursive, Calibri, sans-serif;
 	font-weight: 900;
-	font-size: 35px;
+	font-size: 45px;
 	color: #000000;
 }
 
@@ -277,6 +278,16 @@ main section:nth-of-type(2) {
 }
 
 main section:nth-of-type(4) {
+	background: #24324a url(../img/8.jpeg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+main section:nth-of-type(6) {
+	background: #24324a url(../img/8.jpeg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+main section:nth-of-type(8) {
 	background: #24324a url(../img/8.jpeg) no-repeat center center fixed;
 	background-size: cover;
 }
