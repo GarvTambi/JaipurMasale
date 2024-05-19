@@ -14,24 +14,9 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        header {
-            height: 40vh;
-            position: relative;
-            background: linear-gradient(to right, #ffffff, #ffffff);
-            /* padding: 20px 0; */
-            /* background: #0e131c url("/whatsappcart.png") no-repeat center center fixed;
-            /* background: #0e131c url("./assets/img/whatsappcart.png") no-repeat center center;
-            background-size: cover; Ensures the image covers the entire background */
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        #logo {
-            font-family: 'Allura', cursive;
-            font-size: 36px;
-            color: #fff;
+        .menu_icon {
+            display: none;
+            cursor: pointer;
         }
         nav a {
             color: #fff;
@@ -97,6 +82,11 @@
             color: #fff;
             margin-top: 40px;
         }
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,12 +94,12 @@
         <div class="gradient">
             <div class="container">
                 <h2 id="logo"><a href="index.html">Jaipur Masale</a></h2>
+                <img id="open_menu" class="menu_icon show" src="./assets/img/menu.png" alt="Menu Icon">
+                <img id="close_menu" class="menu_icon" src="./assets/img/x.png" alt="Close Icon">
                 <nav>
                     <a href="index.html" class="menu_link">Welcome</a>
-                    <!-- <a href="about.html" class="menu_link">About</a> -->
                     <a href="products.html" class="menu_link">Our Products</a>
-                    <a href="contact.html" class="menu_link">Contact</a>
-                    <!-- <a href="bulk_query.html" class="menu_link">Bulk Query</a> -->
+                    <!-- <a href="contact.html" class="menu_link">Contact</a> -->
                     <a href="whatsapp-order.html" class="menu_link active">Place orders</a>
                     <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1" target="_blank"> Amazon Store </a>
                     <a href="export.html" class="menu_link active">Export</a>
