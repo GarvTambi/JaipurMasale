@@ -10,6 +10,7 @@ header {
 	position: relative;
 	/* background: #0e131c url("../img/1.jpeg") no-repeat center center fixed; */
 	background-size: cover;
+	transition: top 0.3s;
 }
 
 a {
