@@ -1,4 +1,15 @@
-body, h1, h2, p {
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+body,
+h1,
+h2,
+p {
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif, Calibri;
@@ -6,7 +17,7 @@ body, h1, h2, p {
 }
 
 header {
-	height: 40vh;
+	height: 70px;
 	position: relative;
 	/* background: #0e131c url("../img/1.jpeg") no-repeat center center fixed; */
 	background-size: cover;
@@ -30,15 +41,20 @@ footer {
 	position: relative;
 }
 
-.container, #about, #menu, #reservation, #info, #copyright {
-	width: 80%;
+.container,
+#about,
+#menu,
+#reservation,
+#info,
+#copyright {
+	width: 90%;
 	margin: 0 auto;
 }
 
 /* Header */
 
 nav {
-	font-size: 13px;
+	font-size: 12px;
 }
 
 nav a {
@@ -85,14 +101,17 @@ nav a.active {
 
 .gradient {
 	width: 100%;
-	height: 200px;
-	background: linear-gradient(to bottom, #0e131c, transparent);
+	height: 70px;
+	background: #111827;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 #logo {
 	border-bottom: 2px solid #e6e6e6;
 	letter-spacing: 3px;
-	font-size: 25px;
+	font-size: 20px;
 	font-family: 'Georgia', serif;
 }
 
@@ -118,7 +137,8 @@ nav a.active {
 	font-size: 80px;
 }
 
-.brand, .topic {
+.brand,
+.topic {
 	letter-spacing: 15px;
 	margin-top: -10px;
 	font-family: 'Allura', cursive, Calibri, sans-serif;
@@ -136,7 +156,8 @@ header .symbol {
 	margin-bottom: 5px;
 }
 
-header .symbol:before, header .symbol:after {
+header .symbol:before,
+header .symbol:after {
 	content: "";
 	position: absolute;
 	display: inline-block;
@@ -165,7 +186,9 @@ header h2 {
 
 /* Main */
 
-section#about, section#menu, section#reservation {
+section#about,
+section#menu,
+section#reservation {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 80px;
@@ -186,7 +209,7 @@ section#about, section#menu, section#reservation {
 	text-transform: uppercase;
 }
 
-.content a{
+.content a {
 	color: #d3a261;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -268,9 +291,12 @@ section img {
 }
 
 .icon-img {
-  border-radius: 4px; /* Adjust the value to your desired border radius */
-	width: 25px; /* Adjust this value to your desired width */
-  height: 25px; /* Adjust this value to your desired height */
+	border-radius: 4px;
+	/* Adjust the value to your desired border radius */
+	width: 25px;
+	/* Adjust this value to your desired width */
+	height: 25px;
+	/* Adjust this value to your desired height */
 }
 
 main section:nth-of-type(2) {
@@ -301,9 +327,12 @@ main section:nth-of-type(8) {
 }
 
 #info {
+	height: 100%;
+	width: 95%;
+	padding: 40px 0px 30px 0px;
+	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
-	min-height: 200px;
 }
 
 #info h2 {
@@ -316,7 +345,7 @@ main section:nth-of-type(8) {
 	font-size: 13px;
 }
 
-#info > div {
+#info>div {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
@@ -327,25 +356,16 @@ main section:nth-of-type(8) {
 }
 
 #hours {
+	height: 100%;
 	width: 50%;
 }
 
-.address_container, .open_container {
+.address_container,
+.open_container {
 	margin-top: 20px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-}
-
-#copyright p {
-	font-size: 12px;
-}
-
-#copyright {
-	min-height: 70px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .dot {
@@ -361,6 +381,7 @@ main section:nth-of-type(8) {
 	left: 50%;
 	top: -25px;
 	transform: translateX(-50%);
+	transition: 0.3s ease;
 	background-color: #fff;
 	color: #0e131c;
 	line-height: normal;
@@ -368,6 +389,10 @@ main section:nth-of-type(8) {
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+
+#top:hover {
+	background-color: #f4b323;
 }
 
 #top p {
@@ -379,8 +404,9 @@ main section:nth-of-type(8) {
 }
 
 p#arrow {
-	transform: rotate(90deg);
 	font-size: 18px;
+	transform: rotate(90deg);
+	transform: 0.3s ease;
 }
 
 .address1 {
@@ -402,13 +428,15 @@ p#arrow {
 		flex-flow: column nowrap;
 	}
 
-	#locations, div#hours {
+	#locations,
+	div#hours {
 		width: 100%;
 		padding: 0;
 		text-align: center;
 	}
 
-	div#locations, .address_container {
+	div#locations,
+	.address_container {
 		flex-flow: column nowrap;
 	}
 
@@ -431,7 +459,8 @@ p#arrow {
 		display: none;
 	}
 
-	#open_menu.show, #close_menu.show {
+	#open_menu.show,
+	#close_menu.show {
 		display: block;
 		z-index: 5;
 	}
@@ -479,14 +508,17 @@ p#arrow {
 
 @media all and (max-width: 767px) {
 
-	section#about, section#menu, section#reservation {
+	section#about,
+	section#menu,
+	section#reservation {
 		margin-top: 20px;
 		margin-bottom: 20px;
 		display: flex;
 		flex-direction: column;
 	}
 
-	.content, .img_container {
+	.content,
+	.img_container {
 		width: 100%;
 	}
 
@@ -541,7 +573,10 @@ p#arrow {
 }
 
 @media all and (min-width: 768px) and (max-width: 990px) {
-	section#about, section#menu, section#reservation {
+
+	section#about,
+	section#menu,
+	section#reservation {
 		margin-top: 40px;
 		margin-bottom: 40px;
 	}
@@ -552,7 +587,8 @@ p#arrow {
 		width: 100%;
 	}
 
-	.address2, .open_container div:nth-of-type(3) {
+	.address2,
+	.open_container div:nth-of-type(3) {
 		margin-top: 20px;
 	}
 
@@ -563,28 +599,28 @@ p#arrow {
 
 /* Style all font awesome icons */
 .fa {
-  padding: 10px;
-  font-size: 15px;
-  width: 25px;
-  text-align: center;
-  text-decoration: none;
+	padding: 10px;
+	font-size: 15px;
+	width: 25px;
+	text-align: center;
+	text-decoration: none;
 }
 
 /* Add a hover effect if you want */
 .fa:hover {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
 /* Set a specific color for each brand */
 
 /* Facebook */
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+	background: #3B5998;
+	color: white;
 }
 
 /* Twitter */
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+	background: #55ACEE;
+	color: white;
 }

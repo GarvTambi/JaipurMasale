@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Our Products - Jaipur Masale</title>
     <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+		integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/styles.css">
     <style>
         /* Product grid styles */
         .product-grid {
             display: none;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
             padding: 20px;
-            justify-items: center; /* Align items horizontally */
-            text-align: center; /* Align text center */
+            justify-items: center;
+            /* Align items horizontally */
+            text-align: center;
+            /* Align text center */
         }
 
         .product {
             position: relative;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.25s ease;
+        }
+
+        .product:hover {
+            border: 1px solid rgb(87, 87, 236);
+        }
+
+        .product a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
 
         .product img {
-            width: 100%;
+            height: 100px !important;
+            width: 150px !important;
             height: auto;
             display: block;
         }
 
-        .product h2, .product p {
+        .product h2,
+        .product p {
             margin: 10px 0;
         }
 
@@ -46,10 +80,13 @@
             border: none;
             background-color: #f4f4f4;
             font-size: 16px;
+            transition: all 0.3s linear;
         }
 
+        .category-buttons button:hover,
         .category-buttons button.active {
-            background-color: #ccc;
+            background-color: #f4b323;
+            border: 1px solid transparent;
         }
 
         /* Modal styles */
@@ -87,7 +124,8 @@
         .modal-slider {
             display: flex;
             overflow: hidden;
-            justify-content: center; /* Align slides horizontally */
+            justify-content: center;
+            /* Align slides horizontally */
         }
 
         .modal-slide {
@@ -114,11 +152,36 @@
             display: inline-block;
         }
 
-        .active {
-            background-color: #717171;
+        #menu {
+            margin-top: 0px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .content {
+            padding-bottom: 0px !important;
+        }
+
+        .category-buttons {
+            margin-top: 0px !important;
+        }
+
+        .category-buttons button {
+            background-color: #ffffff;
+            border: 1px solid #9f4103;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        h2 {
+            color: #454754 !important;
+            font-size: 14px;
         }
     </style>
 </head>
+
 <body>
     <header id="go_to_top">
         <div class="gradient">
@@ -130,9 +193,10 @@
                     <a href="products.html" class="menu_link active">Our Products</a>
                     <!-- <a href="contact.html" class="menu_link">Contact</a> -->
                     <!-- <a href="bulk_query.html" class="menu_link active">Bulk Query</a> -->
-                    <a href="whatsapp-order.html" class="menu_link active">Place orders</a>
-                    <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1" target="_blank"> Amazon Store </a>
-                    <a href="export.html" class="menu_link active">Export</a>
+                    <a href="whatsapp-order.html" class="menu_link">Place orders</a>
+                    <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1"
+                        target="_blank"> Amazon Store </a>
+                    <a href="export.html" class="menu_link">Export</a>
                     <a href="blogs.html" class="menu_link">Our Blogs</a>
                 </nav>
             </div>
@@ -140,17 +204,13 @@
     </header>
     <main>
         <section id="menu" class="breakpoint">
-            <!-- <div class="content">
+            <div class="content" data-aos="fade-up">
                 <h1 class="highlight">Discover</h1>
                 <h1 class="topic">our products</h1>
-                <p class="symbol">&#10059;</p>
-                <p>Jaipur Masale is India's 1st Authentic Mughlai Food Masala, Launched in India. Recipes & Cooking Steps are Pre Printed, & Very Easy to Make by Housewives & Working Professionals for whom time consumed is of Utmost Importance. Important Unique Features, Ingredients used are "Pounded", To Maintain Their Natural Fragrance (Aroma) Flavour, Taste & Nutrition. Specialty doesn't require Any Additional Spices From The Kitchen Like Chilies, Coriander, Turmeric, and Garam Masala. Jaipur Masale is a Masala With Difference.</p>
-                <h2><a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1">Shop from Amazon</a></h2>
-                <h2><a href="https://www.flipkart.com/shaan-e-jaipur-biryani-masala-green-korma-white-combo-pack/p/itm8890440ac159c?pid=SCMGE2SMUJHZXM7T">Shop from Whatsapp Store (10% additionally off)</a></h2>
-            </div> -->
+            </div>
 
             <!-- Category Buttons -->
-            <div class="category-buttons">
+            <div class="category-buttons" data-aos="fade-down">
                 <button data-category="category1">Khada Masala</button>
                 <button data-category="category2">Powdered Masala</button>
                 <!-- Add more category buttons as needed -->
@@ -158,57 +218,57 @@
 
             <!-- Category 1 Products -->
             <div id="category1" class="product-grid">
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-up">
                     <a href="products1.html?id=1"> <!-- Add the href attribute here -->
                         <img src="./assets/img/sabut-haldi.jpeg" alt="Product 1">
-                        <h3>Turmeric Sticks/ Sabut Haldi</h3>
+                        <h2>Turmeric Sticks/ Sabut Haldi</h2>
                         <!-- <p>Product 1 Description</p> -->
                     </a>
                 </div>
                 <!-- Add more products as needed -->
-                <div class="product" data-product="2">
+                <div class="product" data-product="2" data-aos="fade-up">
                     <a href="products1.html?id=2"> <!-- Add the href attribute here -->
                         <img src="./assets/img/clove.avif" alt="Product 1">
                         <h2>Organic Clove Whole</h2>
                         <!-- <p>Product 1 Description</p> -->
                     </a>
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-up">
                     <img src="./assets/img/cumin.webp" alt="Product 1">
                     <h2>Organic Whole Cumin Seeds/ Jeera</h2>
                     <!-- <p>Product 1 Description</p> -->
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-up">
                     <img src="./assets/img/kachri1.jpg" alt="Product 1">
                     <h2>Dry Sabut Kachri</h2>
                     <!-- <p>Product 1 Description</p> -->
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-left">
                     <img src="./assets/img/dryginger1.webp" alt="Product 1">
                     <h2>Dry Ginger/ Sonth Sabut</h2>
                     <!-- <p>Product 1 Description</p> -->
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-down">
                     <img src="./assets/img/tezpatta.jpeg" alt="Product 1">
                     <h2>Organic Tejpan Patta</h2>
                     <!-- <p>Product 1 Description</p> -->
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-up">
                     <img src="./assets/img/elaichi.webp" alt="Product 1">
                     <h2>Whole Cardamom/ Elaichi</h2>
                     <!-- <p>Product 1 Description</p> -->
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-right">
                     <img src="./assets/img/kasuri1.jpeg" alt="Product 1">
                     <h2>Kasuri Methi</h2>
                     <!-- <p>Product 1 Description</p> -->
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-right">
                     <img src="./assets/img/dalchini.jpeg" alt="Product 1">
                     <h2>Organic Cinnamom Sticks/ Dalchini</h2>
                     <!-- <p>Product 1 Description</p> -->
                 </div>
-                <div class="product" data-product="1">
+                <div class="product" data-product="1" data-aos="fade-up">
                     <img src="./assets/img/chilli2.jpeg" alt="Product 1">
                     <h2>Lavangi Dandicut Red Chilli</h2>
                     <!-- <p>Product 1 Description</p> -->
@@ -216,7 +276,7 @@
             </div>
 
             <!-- Category 2 Products -->
-            <div id="category2" class="product-grid">
+            <div id="category2" class="product-grid" data-aos="fade-up">
                 <div class="product" data-product="2">
                     <img src="./assets/img/product2_main.jpg" alt="Product 2">
                     <h2>Product 2 Title</h2>
@@ -258,7 +318,17 @@
         </div>
     </div>
 
+    <script src="//code.tidio.co/prugbdb0m4osjyy13krhnpjnressdkn5.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+		integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        AOS.init({
+			duration: 1200,
+		});
+
+
         // JavaScript for category navigation and modal
         const categoryButtons = document.querySelectorAll('.category-buttons button');
         const productGrids = document.querySelectorAll('.product-grid');
@@ -330,6 +400,6 @@
         // Programmatically click on Category 1 button by default
         categoryButtons[0].click(); // Assuming Category 1 button is the first button
     </script>
-    <script src="//code.tidio.co/prugbdb0m4osjyy13krhnpjnressdkn5.js" async></script>
 </body>
+
 </html>

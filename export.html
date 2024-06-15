@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +28,8 @@
             display: block;
         }
 
-        .product h2, .product p {
+        .product h2,
+        .product p {
             margin: 10px 0;
         }
 
@@ -111,16 +113,12 @@
             display: inline-block;
         }
 
-        .active {
-            background-color: #717171;
-        }
-
         /* Centering content */
         #export {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 40vh;
+            height: calc(100vh - 70px);
             text-align: center;
         }
 
@@ -129,9 +127,20 @@
             padding: 50px;
             background: #f9f9f9;
             border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        footer {
+            padding: 20px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
+
 <body>
     <header id="go_to_top">
         <div class="gradient">
@@ -140,11 +149,12 @@
                 <nav>
                     <a href="index.html" class="menu_link">Welcome</a>
                     <!-- <a href="about.html" class="menu_link">About</a> -->
-                    <a href="products.html" class="menu_link active">Our Products</a>
+                    <a href="products.html" class="menu_link">Our Products</a>
                     <!-- <a href="contact.html" class="menu_link">Contact</a> -->
                     <!-- <a href="bulk_query.html" class="menu_link active">Bulk Query</a> -->
-                    <a href="whatsapp-order.html" class="menu_link active">Place orders</a>
-                    <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1" target="_blank"> Amazon Store </a>
+                    <a href="whatsapp-order.html" class="menu_link">Place orders</a>
+                    <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1"
+                        target="_blank"> Amazon Store </a>
                     <a href="export.html" class="menu_link active">Export</a>
                     <a href="blogs.html" class="menu_link">Our Blogs</a>
                 </nav>
@@ -165,4 +175,5 @@
     </footer>
     <script src="//code.tidio.co/prugbdb0m4osjyy13krhnpjnressdkn5.js" async></script>
 </body>
+
 </html>
