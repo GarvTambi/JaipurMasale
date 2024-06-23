@@ -41,7 +41,10 @@ footer {
 	position: relative;
 }
 
-.container,
+.container{
+	width: 90%;
+	margin: 0;
+}
 #about,
 #menu,
 #reservation,
@@ -349,6 +352,7 @@ main section:nth-of-type(8) {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
+	align-items: center;
 }
 
 #locations {
@@ -378,7 +382,7 @@ main section:nth-of-type(8) {
 	height: 50px;
 	border-radius: 50%;
 	position: absolute;
-	left: 50%;
+	left: 97%;
 	top: -25px;
 	transform: translateX(-50%);
 	transition: 0.3s ease;
@@ -623,4 +627,80 @@ p#arrow {
 .fa-twitter {
 	background: #55ACEE;
 	color: white;
+}
+
+
+/* Review Section Styles */
+#reviews {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#reviews .content {
+    /* max-width: 800px;
+    margin: auto; */
+	
+    text-align: center;
+}
+
+#reviewForm {
+    margin-bottom: 30px;
+}
+
+#reviewForm .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#reviewForm label {
+    display: block;
+    font-weight: bold;
+}
+
+#reviewForm input,
+#reviewForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#reviewForm button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reviewForm button:hover {
+    background-color: #555;
+}
+
+#reviewsDisplay {
+    margin-top: 30px;
+}
+
+#reviewsDisplay h2 {
+    margin-bottom: 20px;
+}
+
+#reviewList .review-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#reviewList .review-item p {
+    margin: 0;
+}
+
+#reviewList .review-item .review-name {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
