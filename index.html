@@ -15,7 +15,7 @@
 		integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./assets/css/styles.css">
-	
+
 	<style>
 
 
@@ -63,7 +63,7 @@ nav a {
         }
 
         #menu img {
-			
+
             height: 400px;
             width: 500px;
         }
@@ -194,7 +194,7 @@ width: 50%;
 			#logo {
                 font-size: 1.5rem;
 				border: 0;
-				
+
             }
 #top{
 	left: 90%;
@@ -233,7 +233,7 @@ width: 50%;
             width: 100%;
             z-index: 1000;
             transition: top 0.3s;
-			
+
         }
 
         /* Show header when scrolling up */
@@ -245,7 +245,17 @@ width: 50%;
         .header-hide {
             top: -100px;
         }
-		
+
+        .half-height {
+            height: 50%;
+        }
+
+        #video-section video {
+            height: 50%;
+            width: 100%;
+            object-fit: cover;
+        }
+
     </style>
 
 
@@ -516,12 +526,19 @@ footer {
 						target="_blank"> Amazon Store </a>
 					<a href="export.html" class="menu_link">Export</a>
 					<a href="blogs.html" class="menu_link">Our Blogs</a>
-					<!-- <a href="https://www.flipkart.com/shaan-e-jaipur-biryani-masala-green-korma-white-combo-pack/p/itm8890440ac159c?pid=SCMGE2SMUJHZXM7T" target="_blank"> <img class="icon-img" src="./assets/img/flipkart-icon.jpeg" > </a> -->
+					<a href="https://api.whatsapp.com/send?phone=919602985472&text=Hello Jaipur Masale" target="_blank"> <img class="icon-img" src="./assets/img/whatsapp.png" > </a>
 					<!-- <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1" target="_blank"> <img class="icon-img" src="./assets/img/jiomart-icon.png" > </a> -->
 				</nav>
 			</div>
 		</div>
 	</header>
+
+    <section id="video-section" class="half-height">
+        <video width="100%" controls>
+            <source src="./assets/img/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
 
 	<main>
 		<section id="about" class="breakpoint">
@@ -551,35 +568,7 @@ footer {
 				<h1 class="topic"> our process </h1>
 				<p>The Journey of Spice: From Farm to Your Table
 				<p>
-
-					<section id="journey">
-						<div class="circle-container">
-							<div class="circle-box">
-								<img src="./assets/img/farms-banner.jpeg" alt="Farms-Banner">
-								<p>The Farms</p>
-							</div>
-							<div class="circle-box">
-								<img src="./assets/img/harvest-banner.jpg" alt="Harvest-Banner">
-								<p>The Harvest</p>
-							</div>
-							<div class="circle-box">
-								<img src="./assets/img/factory-banner.jpeg" alt="Factory-Banner">
-								<p>The Factory</p>
-							</div>
-							<div class="circle-box">
-								<img src="./assets/img/blending-image.jpeg" alt="Blending-Banner">
-								<p>The Blending</p>
-							</div>
-							<div class="circle-box">
-								<img src="./assets/img/packaging-image.jpeg" alt="Packaging-Banner">
-								<p>The Packaging</p>
-							</div>
-							<div class="circle-box">
-								<img src="./assets/img/promises-image.jpeg" alt="Promise-Banner">
-								<p>The Promise</p>
-							</div>
-						</div>
-					</section>
+                    <img src="./assets/img/herb.jpg">
 		</section>
 
 		<section class="divider">
@@ -599,11 +588,11 @@ footer {
 					Additional Spices From The Kitchen Like Chilly'S, Coriander, Turmeric, and Garam Masala. Jaipur
 					Masale is a Masala With Difference. </p>
 				<h2><a
-						href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1">
-						Shop from Amazon </a></h2>
+						href="https://www.amazon.in/stores/Shaan-E-Jaipur/page/C0CB0EE5-746F-4F83-B553-F9838B4DA3CB?ref_=ast_bln">
+						Shop from Our Amazon Store</a></h2>
 				<h2><a
-						href="https://www.flipkart.com/shaan-e-jaipur-biryani-masala-green-korma-white-combo-pack/p/itm8890440ac159c?pid=SCMGE2SMUJHZXM7T">
-						Shop from Whatsapp Store (10% additionally off) </a></h2>
+						href="products.html">
+						Visit our catalogue </a></h2>
 			</div>
 			<img src="./assets/img/products-banner.jpg" alt="Our Products Image" data-aos="fade-right">
 		</section>
@@ -614,56 +603,14 @@ footer {
 		</section>
 
 		<section id="menu" class="breakpoint">
-			<div class="images">
-				<img src="./assets/img/founder-banner-2.jpg" alt="Authentic Spices Image">
-				<img src="./assets/img/founder-banner.jpg" alt="Authentic Spices Image">
-				<img src="https://static.toiimg.com/thumb/imgsize-23456,msid-109875353,width-600,resizemode-4/109875353.jpg" alt="Authentic Spices Image">
-
-			</div>
-			<div class="content">
-				<h1 class="highlight"> Founder </h1>
-				<h1 class="topic"> What our Founder think? </h1>
-				<p class="symbol"> &#10059; </p>
-				<p> Jaipur Masale is India's 1st Authentic Mughlai Food Masala, Launched in India. Recipes & Cooking
-					Steps are Pre Printed, & Very Easy to Make by Housewives & Working Professionals for whom time
-					consumed is of Utmost Important. Important Unique Features, Ingredients used are "Pounded", To
-					Maintain Their Natural Fragrance (Aroma) Flavour, Taste & Nutrition. Specialty doesn't require Any
-					Additional Spices From The Kitchen Like Chilly'S, Coriander, Turmeric, and Garam Masala. Jaipur
-					Masale is a Masala With Difference. </p>
-				<h2><a
-						href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1">
-						Shop from Amazon </a></h2>
-				<h2><a
-						href="https://www.flipkart.com/shaan-e-jaipur-biryani-masala-green-korma-white-combo-pack/p/itm8890440ac159c?pid=SCMGE2SMUJHZXM7T">
-						Shop from Whatsapp Store (10% additionally off) </a></h2>
-			</div>
 		</section>
-		
+
 		<div id="reviews1" class="breakpoint" style="display: flex;justify-content: center;">
 			<div class="content" data-aos="fade-up">
 				<h1 class="highlight">Customer</h1>
 				<h1 class="topic">Reviews</h1>
-				<!-- <p class="symbol">&#10059;</p> -->
-		
-<!-- 				
-				<form id="reviewForm">
-					<div class="form-group">
-						<label for="name">Name:</label>
-						<input type="text" id="name" name="name" placeholder="Your Name" required>
-					</div>
-					<div class="form-group">
-						<label for="review">Review:</label>
-						<textarea id="review" name="review" rows="4" placeholder="Write a review here" required></textarea>
-					</div>
-					<button type="submit">Submit Review</button>
-				</form>
-		
-			 -->
-			 <section id="reviews" style="display: flex;background: transparent;">
-		
+				<section id="reviews" style="display: flex;background: transparent;">
 				<div class="content" style="width: 50%;">
-					
-					
 					<div id="reviewList" style="">
 						<div class="review-item" style="gap: 16px;">
 							<div class="review-text" style="display: flex;flex-wrap: wrap;margin: 0;"><p id="reviewTag">@ jaipurmasale</p>Absolutely loved the spices! The aroma and flavor were exceptional. Will definitely purchase again!</div>
@@ -695,28 +642,6 @@ footer {
 								<div class="review-info">
 									<p class="review-name" style="margin-bottom: 0;">Sai Ganesh</p>
 									<p class="review-timestamp">@saiganesh • 2h</p>
-								</div>
-							</div>
-						</div>
-						<div class="review-item" style="gap: 16px;">
-							<div class="review-text" style="display: flex;flex-wrap: wrap;margin: 0;"><p id="reviewTag">@ jaipurmasale</p>Top-notch spices! The flavors are rich and vibrant. I am very pleased with my purchase.</div>
-
-							<div class="review-header">
-								<img src="https://scontent.fhyd9-1.fna.fbcdn.net/v/t39.30808-1/326301792_1250534248832914_2354946064500014562_n.jpg?stp=dst-jpg_p200x200&_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=aPn-plDhzpsQ7kNvgEz9kGi&_nc_ht=scontent.fhyd9-1.fna&oh=00_AYC8ULuomVm8HdiakwXPXMzixYo_JywQGvnEnxOm4lQKZw&oe=6675D330" alt="Avatar" class="avatar">
-								<div class="review-info">
-									<p class="review-name" style="margin-bottom: 0;">Kiran</p>
-									<p class="review-timestamp">@kiran23 • 5h</p>
-								</div>
-							</div>
-						</div>
-						<div class="review-item" style="gap: 16px;">
-							<div class="review-text" style="display: flex;flex-wrap: wrap;margin: 0;"><p id="reviewTag">@ jaipurmasale</p>Fast shipping and excellent quality. The spices have exceeded my expectations in every way.</div>
-
-							<div class="review-header">
-								<img src="https://joinditto.in/static/67a5d59733a2f07178aea8413f75cc89/0195d/kaartics.webp" alt="Avatar" class="avatar">
-								<div class="review-info">
-									<p class="review-name" style="margin-bottom: 0;">Hussain</p>
-									<p class="review-timestamp">@hussain • 10h</p>
 								</div>
 							</div>
 						</div>
@@ -724,8 +649,6 @@ footer {
 				</div>
 
 				<div class="content" style="width: 50%;">
-				
-					
 					<div id="reviewList" style="">
 						<div class="review-item" style="gap: 16px;">
 							<div class="review-text" style="display: flex;flex-wrap: wrap;margin: 0;"><p id="reviewTag">@ jaipurmasale</p>Absolutely loved the spices! The aroma and flavor were exceptional. Will definitely purchase again!</div>
@@ -757,40 +680,16 @@ footer {
 								<div class="review-info">
 									<p class="review-name" style="margin-bottom: 0;">Sai Ganesh</p>
 									<p class="review-timestamp">@saiganesh • 2h</p>
-								</div>
-							</div>
-						</div>
-						<div class="review-item" style="gap: 16px;">
-							<div class="review-text" style="display: flex;flex-wrap: wrap;margin: 0;"><p id="reviewTag">@ jaipurmasale</p>Top-notch spices! The flavors are rich and vibrant. I am very pleased with my purchase.</div>
-
-							<div class="review-header">
-								<img src="https://scontent.fhyd9-1.fna.fbcdn.net/v/t39.30808-1/326301792_1250534248832914_2354946064500014562_n.jpg?stp=dst-jpg_p200x200&_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=aPn-plDhzpsQ7kNvgEz9kGi&_nc_ht=scontent.fhyd9-1.fna&oh=00_AYC8ULuomVm8HdiakwXPXMzixYo_JywQGvnEnxOm4lQKZw&oe=6675D330" alt="Avatar" class="avatar">
-								<div class="review-info">
-									<p class="review-name" style="margin-bottom: 0;">Kiran</p>
-									<p class="review-timestamp">@kiran23 • 5h</p>
-								</div>
-							</div>
-						</div>
-						<div class="review-item" style="gap: 16px;">
-							<div class="review-text" style="display: flex;flex-wrap: wrap;margin: 0;"><p id="reviewTag">@ jaipurmasale</p>Fast shipping and excellent quality. The spices have exceeded my expectations in every way.</div>
-
-							<div class="review-header">
-								<img src="https://joinditto.in/static/67a5d59733a2f07178aea8413f75cc89/0195d/kaartics.webp" alt="Avatar" class="avatar">
-								<div class="review-info">
-									<p class="review-name" style="margin-bottom: 0;">Hussain</p>
-									<p class="review-timestamp">@hussain • 10h</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-	
 			</div>
 		</div>
-		
 		<section class="divider">
-			<h1 class="highlight"> Autrhentic </h1>
+			<h1 class="highlight"> Authentic </h1>
 			<h1 class="topic"> Spices </h1>
 		</section>
 	</main>
@@ -813,7 +712,7 @@ footer {
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="locations">
 				<h2> Important Links </h2>
 				<div class="address_container">
@@ -840,8 +739,8 @@ footer {
 					<div class="open">
 						<link rel="stylesheet"
 							href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-						<p>+91 8*********, +91 9*******</p>
-						<p>j*******@gmail.com</p>
+						<p>+91 8764576256, +91 9602985472</p>
+						<p>jaipurmasale@gmail.com</p>
 						<!-- Add font awesome icons -->
 						<a href="#" class="fa fa-facebook"> </a>
 						<a href="#" class="fa fa-twitter"> </a>
@@ -878,7 +777,7 @@ footer {
 			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 			if (scrollTop > lastScrollTop) {
-				
+
 				header.style.top = '-70px';
 			} else {
 				header.style.top = '0';
@@ -913,10 +812,10 @@ footer {
             reviewItem.appendChild(reviewName);
             reviewItem.appendChild(reviewContent);
 
-           
+
             reviewList.appendChild(reviewItem);
 
-            
+
             reviewForm.reset();
         }
     });
@@ -924,7 +823,7 @@ footer {
 
 	</script>
 	<script>
-	
+
 	</script>
 </body>
 

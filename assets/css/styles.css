@@ -111,6 +111,16 @@ nav a.active {
 	align-items: center;
 }
 
+.half-height {
+	height: 50%;
+}
+
+#video-section video {
+	height: 50%;
+	width: 100%;
+	object-fit: cover;
+}
+
 #logo {
 	border-bottom: 2px solid #e6e6e6;
 	letter-spacing: 3px;
@@ -639,7 +649,7 @@ p#arrow {
 #reviews .content {
     /* max-width: 800px;
     margin: auto; */
-	
+
     text-align: center;
 }
 
