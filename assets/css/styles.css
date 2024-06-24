@@ -112,14 +112,9 @@ nav a.active {
 }
 
 .half-height {
-	height: 50%;
+	/* height: 50%; */
 }
 
-#video-section video {
-	height: 50%;
-	width: 100%;
-	object-fit: cover;
-}
 
 #logo {
 	border-bottom: 2px solid #e6e6e6;
@@ -204,14 +199,12 @@ section#menu,
 section#reservation {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 80px;
 	margin-bottom: 80px;
 }
 
 .content {
 	box-sizing: border-box;
-	padding: 40px;
-	width: 50%;
+	width: 100%;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
