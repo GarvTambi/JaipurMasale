@@ -5,6 +5,8 @@ const SCROLL_DISTANCES = [];
 const LINKS = Array.from(document.getElementsByClassName("menu_link"));
 const MENU_ICON_OPEN = document.getElementById("open_menu");
 const MENU_ICON_CLOSE = document.getElementById("close_menu");
+const NAVBAR = document.getElementsByTagName('nav')?.[0]
+
 // const express = require('express');
 // const bodyParser = require('body-parser');
 // const mongoose = require('mongoose');
@@ -18,14 +20,14 @@ const MENU_ICON_CLOSE = document.getElementById("close_menu");
 // Connect to MongoDB
 // mongoose.connect('mongodb://localhost:27017/jaipurMasale', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Define a schema and model for the user data
+// // Define a schema and model for the user data
 // const userSchema = new mongoose.Schema({
 //     name: String,
 //     mobile: String
 // });
 // const User = mongoose.model('User', userSchema);
 
-// Handle form submission
+// // Handle form submission
 // app.post('/submit', (req, res) => {
 //     const { name, mobile } = req.body;
 //     const newUser = new User({ name, mobile });
@@ -48,7 +50,7 @@ const MENU_ICON_CLOSE = document.getElementById("close_menu");
 // });
 // const BulkQuery = mongoose.model('BulkQuery', bulkQuerySchema);
 
-// // Handle form submission for bulk queries
+// Handle form submission for bulk queries
 // app.post('/bulk-query', (req, res) => {
 //     const { name, mobile, query } = req.body;
 //     const newQuery = new BulkQuery({ name, mobile, query });
@@ -62,7 +64,7 @@ const MENU_ICON_CLOSE = document.getElementById("close_menu");
 //     });
 // });
 
-// // Serve the HTML file
+// Serve the HTML file
 // app.get('/bulk-query', (req, res) => {
 //     res.sendFile(__dirname + '/bulk-query.html');
 // });
@@ -79,6 +81,8 @@ const MENU_ICON_CLOSE = document.getElementById("close_menu");
 
 
 function debounce(func, delay = 40) {
+
+   
 	let timer;
 	return function() {
 		let context = this;
@@ -93,7 +97,7 @@ function debounce(func, delay = 40) {
 
 function fixMenu() {
 	let scrolling = window.pageYOffset || document.documentElement.scrollTop;
-
+    
 	if (scrolling > MENU_BOX.scrollHeight) {
 		if (!MENU_BOX.classList.contains("fixed_menu")) {
 			MENU_BOX.classList.add("fixed_menu");
@@ -204,12 +208,14 @@ function toggleMenuOnClick() {
 		MENU_ICON_CLOSE.classList.add("show");
 		MENU_BOX.classList.add("show_menu");
 		MENU.classList.add("show_menu");
+        NAVBAR.style.display = 'flex'
         
 	} else {
 		// activates when close menu icon is clicked
 		MENU_ICON_OPEN.classList.add("show");
 		MENU_BOX.classList.remove("show_menu");
 		MENU.classList.remove("show_menu");
+        NAVBAR.style.display = 'none'
 	}
 
 }
@@ -218,8 +224,8 @@ window.addEventListener("scroll", debounce(fixMenu));
 window.addEventListener("resize", debounce(getBreakPoints, 500));
 window.addEventListener("scroll", debounce(activateMenuOnScroll));
 
-LINKS.forEach(MenuLink => MenuLink.addEventListener("click", smoothScroll));
 
-console.log(MENU_ICON_OPEN)
-MENU_ICON_OPEN.addEventListener("click",toggleMenuOnClick);
+
+LINKS.forEach(MenuLink => MenuLink.addEventListener("click", smoothScroll));
+MENU_ICON_OPEN.addEventListener("click", toggleMenuOnClick);
 MENU_ICON_CLOSE.addEventListener("click", toggleMenuOnClick);
