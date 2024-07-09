@@ -259,7 +259,13 @@ width: 50%;
 
         @media screen and (max-width: 768px) {
             nav {
-                display: none !important;
+                display: none ;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            nav {
+                display: flex ;
             }
         }
     </style>
@@ -298,7 +304,7 @@ header {
     transition: all 0.7s ease-in-out;
 }
 nav {
-    display: flex;
+
     justify-content: space-between;
     align-items: center;
 }
