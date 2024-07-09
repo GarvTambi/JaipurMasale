@@ -257,6 +257,17 @@ width: 50%;
             object-fit: cover;
         }
 
+        @media screen and (max-width: 768px) {
+            nav {
+                display: none ;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            nav {
+                display: flex ;
+            }
+        }
     </style>
 
 
@@ -293,7 +304,7 @@ header {
     transition: all 0.7s ease-in-out;
 }
 nav {
-    display: flex;
+
     justify-content: space-between;
     align-items: center;
 }
@@ -774,6 +785,7 @@ footer {
 		</div>
 	</footer>
 
+    
 	<script src="./assets/js/scripts.js"> </script>
 	<script src="//code.tidio.co/prugbdb0m4osjyy13krhnpjnressdkn5.js" async></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
