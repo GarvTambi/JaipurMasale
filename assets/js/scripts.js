@@ -5,77 +5,77 @@ const SCROLL_DISTANCES = [];
 const LINKS = Array.from(document.getElementsByClassName("menu_link"));
 const MENU_ICON_OPEN = document.getElementById("open_menu");
 const MENU_ICON_CLOSE = document.getElementById("close_menu");
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const { Parser } = require('json2csv');
-const fs = require('fs');
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const mongoose = require('mongoose');
+// const { Parser } = require('json2csv');
+// const fs = require('fs');
 
-const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// const app = express();
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/jaipurMasale', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/jaipurMasale', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define a schema and model for the user data
-const userSchema = new mongoose.Schema({
-    name: String,
-    mobile: String
-});
-const User = mongoose.model('User', userSchema);
+// const userSchema = new mongoose.Schema({
+//     name: String,
+//     mobile: String
+// });
+// const User = mongoose.model('User', userSchema);
 
 // Handle form submission
-app.post('/submit', (req, res) => {
-    const { name, mobile } = req.body;
-    const newUser = new User({ name, mobile });
+// app.post('/submit', (req, res) => {
+//     const { name, mobile } = req.body;
+//     const newUser = new User({ name, mobile });
 
-    newUser.save((err) => {
-        if (err) {
-            res.status(500).send('Error saving to database');
-        } else {
-            res.status(200).send('Data saved successfully');
-        }
-    });
-});
-
-
-const bulkQuerySchema = new mongoose.Schema({
-    name: String,
-    mobile: String,
-    query: String,
-    date: { type: Date, default: Date.now }
-});
-const BulkQuery = mongoose.model('BulkQuery', bulkQuerySchema);
-
-// Handle form submission for bulk queries
-app.post('/bulk-query', (req, res) => {
-    const { name, mobile, query } = req.body;
-    const newQuery = new BulkQuery({ name, mobile, query });
-
-    newQuery.save((err) => {
-        if (err) {
-            res.status(500).send('Error saving to database');
-        } else {
-            res.status(200).send('Query submitted successfully');
-        }
-    });
-});
-
-// Serve the HTML file
-app.get('/bulk-query', (req, res) => {
-    res.sendFile(__dirname + '/bulk-query.html');
-});
+//     newUser.save((err) => {
+//         if (err) {
+//             res.status(500).send('Error saving to database');
+//         } else {
+//             res.status(200).send('Data saved successfully');
+//         }
+//     });
+// });
 
 
-// Serve the HTML file
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/contact.html');
-});
+// const bulkQuerySchema = new mongoose.Schema({
+//     name: String,
+//     mobile: String,
+//     query: String,
+//     date: { type: Date, default: Date.now }
+// });
+// const BulkQuery = mongoose.model('BulkQuery', bulkQuerySchema);
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
+// // Handle form submission for bulk queries
+// app.post('/bulk-query', (req, res) => {
+//     const { name, mobile, query } = req.body;
+//     const newQuery = new BulkQuery({ name, mobile, query });
+
+//     newQuery.save((err) => {
+//         if (err) {
+//             res.status(500).send('Error saving to database');
+//         } else {
+//             res.status(200).send('Query submitted successfully');
+//         }
+//     });
+// });
+
+// // Serve the HTML file
+// app.get('/bulk-query', (req, res) => {
+//     res.sendFile(__dirname + '/bulk-query.html');
+// });
+
+
+// // Serve the HTML file
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname + '/contact.html');
+// });
+
+// app.listen(3000, () => {
+//     console.log('Server is running on port 3000');
+// });
 
 
 function debounce(func, delay = 40) {
@@ -219,5 +219,7 @@ window.addEventListener("resize", debounce(getBreakPoints, 500));
 window.addEventListener("scroll", debounce(activateMenuOnScroll));
 
 LINKS.forEach(MenuLink => MenuLink.addEventListener("click", smoothScroll));
-MENU_ICON_OPEN.addEventListener("click", toggleMenuOnClick);
+
+console.log(MENU_ICON_OPEN)
+MENU_ICON_OPEN.addEventListener("click",toggleMenuOnClick);
 MENU_ICON_CLOSE.addEventListener("click", toggleMenuOnClick);
