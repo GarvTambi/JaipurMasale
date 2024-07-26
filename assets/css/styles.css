@@ -86,7 +86,6 @@ nav a.active {
 
 .container.fixed_menu {
 	background-color: #0e131c;
-	border-bottom: 1px solid #d3a261;
 	width: 100%;
 	position: fixed;
 	top: 0%;
