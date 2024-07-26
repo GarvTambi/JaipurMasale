@@ -181,7 +181,7 @@ function distanceToTop(elem) {
 }
 
 function smoothScroll(e) {
-    e.preventDefault();
+
     let targetId = this.getAttribute("href");
     let targetSection = document.querySelector(targetId);
     if (!targetSection) return;
