@@ -99,29 +99,42 @@
                 padding: 20px;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            header .container {
+                /* flex-direction: column; */
+                align-items: center;
+				padding: 0 10px;
+            }
+
+        }
     </style>
 </head>
 
 <body>
-    <header id="go_to_top">
-        <div class="gradient">
-            <div class="container">
-                <h2 id="logo"><a href="index.html">Jaipur Masale</a></h2>
-                <img id="open_menu" class="menu_icon show" src="./assets/img/menu.png" alt="Menu Icon">
-                <img id="close_menu" class="menu_icon" src="./assets/img/x.png" alt="Close Icon">
-                <nav>
-                    <a href="index.html" class="menu_link">Welcome</a>
-                    <a href="products.html" class="menu_link">Our Products</a>
-                    <!-- <a href="contact.html" class="menu_link">Contact</a> -->
-                    <a href="whatsapp-order.html" class="menu_link active">Place orders</a>
-                    <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1"
-                        target="_blank"> Amazon Store </a>
-                    <a href="export.html" class="menu_link">Export</a>
-                    <a href="blogs.html" class="menu_link">Our Blogs</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <header id="go_to_top" data-aos="fade-down" style="width: 100vw;">
+		<div class="gradient">
+			<div class="container">
+				<h2 id="logo"><a href="index.html"> Jaipur Masale </a></h2>
+				<img id="open_menu" class="menu_icon show" src="./assets/img/menu.png">
+				<img id="close_menu" class="menu_icon" src="./assets/img/x.png">
+				<nav>
+					<a href="index.html" class="menu_link">Welcome</a>
+					<!-- <a href="about.html" class="menu_link">About</a> -->
+					<a href="products.html" class="menu_link">Our Products</a>
+					<!-- <a href="contact.html" class="menu_link">Contact</a> -->
+					<!-- <a href="bulk_query.html" class="menu_link active">Bulk Query</a> -->
+					<a href="whatsapp-order.html" class="menu_link active">Place orders</a>
+					<a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1"
+						target="_blank"> Amazon Store </a>
+					<a href="export.html" class="menu_link">Export</a>
+					<a href="blogs.html" class="menu_link">Our Blogs</a>
+					<a href="https://api.whatsapp.com/send?phone=919602985472&text=Hello Jaipur Masale" target="_blank"> <img class="icon-img" src="./assets/img/whatsapp.png" > </a>
+					<!-- <a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1" target="_blank"> <img class="icon-img" src="./assets/img/jiomart-icon.png" > </a> -->
+				</nav>
+			</div>
+		</div>
+	</header>
     <main>
         <section id="whatsapp-order" class="breakpoint">
             <div class="content">
@@ -141,6 +154,7 @@
     <footer>
         &copy; 2024 Jaipur Masale. All rights reserved.
     </footer>
+    <script src="./assets/js/scripts.js"> </script>
     <script>
         document.getElementById('whatsappOrderForm').addEventListener('submit', function (event) {
             event.preventDefault();
