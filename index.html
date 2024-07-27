@@ -414,7 +414,7 @@ footer {
     gap: 20px;
     overflow: auto;
     background-color: #f9f9f9;
-    
+
 }
 
 #reviews::-webkit-scrollbar {
@@ -563,7 +563,7 @@ footer {
 					<!-- <a href="contact.html" class="menu_link">Contact</a> -->
 					<!-- <a href="bulk_query.html" class="menu_link active">Bulk Query</a> -->
 					<a href="whatsapp-order.html" class="menu_link">Place orders</a>
-					<a href="https://www.amazon.in/s?i=merchant-items&me=A1WKMM93O0PJNV&marketplaceID=A21TJRUUN4KGV&qid=1667064991&ref=sr_pg_1"
+					<a href="https://www.amazon.in/stores/page/C0CB0EE5-746F-4F83-B553-F9838B4DA3CB?ingress=2&visitId=aa3831d5-3cd5-40c0-b9e4-5a76013c6c93&ref_=ast_bln"
 						target="_blank"> Amazon Store </a>
 					<a href="export.html" class="menu_link">Export</a>
 					<a href="blogs.html" class="menu_link">Our Blogs</a>
@@ -576,7 +576,7 @@ footer {
 
     <section id="video-section" class="half-height">
         <video width="100%" height="100%" muted autoplay>
-            <source src="./assets/img/home_video.mp4" type="video/mp4">
+            <source src="./assets/img/home_video2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
@@ -744,9 +744,9 @@ footer {
 				<h2> Address </h2>
 				<div class="address_container">
 					<div class="address1">
-						<p> C-8 ******* </p>
-						<p> G**** </p>
-						<p> R***** </p>
+						<p>C-8 Raghunath Colony</p>
+                        <p>Galta Gate, Jaipur</p>
+                        <p>Raj. 302003</p>
 					</div>
 				</div>
 			</div>
@@ -781,9 +781,9 @@ footer {
 						<p>jaipurmasale@gmail.com</p>
 						<!-- Add font awesome icons -->
 						<a href="#" class="fa fa-facebook"> </a>
-						<a href="#" class="fa fa-twitter"> </a>
-						<a href="#" class="fa fa-instagram"> </a>
-						<a href="#" class="fa fa-amazon"></a>
+						<a href="#" class="fa fa-youtube"> </a>
+						<a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"> </a>
 					</div>
 				</div>
 			</div>
@@ -796,7 +796,7 @@ footer {
 		</div>
 	</footer>
 
-    
+
 	<script src="./assets/js/scripts.js"> </script>
 	<script src="//code.tidio.co/prugbdb0m4osjyy13krhnpjnressdkn5.js" async></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
@@ -816,13 +816,13 @@ footer {
 			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             if(header) {
                 if (scrollTop > lastScrollTop) {
-             
+
              header.style.top = '-70px';
          } else {
              header.style.top = '0';
          }
             }
-			
+
 
 			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 		});
@@ -865,20 +865,20 @@ footer {
 	</script>
 	<script>
         const container = document.getElementsByClassName("infiniteScroll--left")[0];
-       
+
 
 	const scrollWidth = container.scrollWidth;
 	let isScrollingPaused = false;
-  
+
 	window.addEventListener("load", () => {
 
-    
+
 		self.setInterval(() => {
 			if (isScrollingPaused) {
 				return;
 			}
 			const first = container.getElementsByClassName("review-item")[0];
-          
+
 			if (!isElementInViewport(first)) {
 				container.appendChild(first);
 				container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
@@ -903,7 +903,7 @@ footer {
 	}
 	const allArticles = container.getElementsByClassName("review-item");
 
-   
+
 	for (let reviewCard of allArticles) {
 		reviewCard.addEventListener("mouseenter", pauseScrolling);
 		reviewCard.addEventListener("mouseleave", resumeScrolling);
